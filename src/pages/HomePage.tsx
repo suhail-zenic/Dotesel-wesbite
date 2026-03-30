@@ -9,6 +9,7 @@ import {
   engineeringHighlights,
   faqs,
   industries,
+  type IndustryName,
   innovationPillars,
   integrationTiles,
   outcomes,
@@ -20,7 +21,7 @@ import {
 
 export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
-  const [activeIndustry, setActiveIndustry] = useState(industries[0])
+  const [activeIndustry, setActiveIndustry] = useState<IndustryName>(industries[0])
   const [openFaq, setOpenFaq] = useState<number | null>(0)
   const [startSnapshotCount, setStartSnapshotCount] = useState(false)
   const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success'>('idle')
@@ -101,7 +102,7 @@ export default function HomePage() {
                 Start Your Transformation
               </button>
               <Link
-                to="/#case-studies"
+                to="/case-studies"
                 className="rounded-full border border-slate-600 px-7 py-3 text-sm font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
               >
                 View Case Studies

@@ -39,12 +39,17 @@ export function SiteFooter() {
             <p className="text-xs uppercase tracking-[0.18em] text-cyan-300">Quick links</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li>
-                <Link className="footer-link transition hover:text-cyan-200" to="/#solutions">
+                <Link className="footer-link transition hover:text-cyan-200" to="/solutions">
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link className="footer-link transition hover:text-cyan-200" to="/#case-studies">
+                <Link className="footer-link transition hover:text-cyan-200" to="/industries">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link className="footer-link transition hover:text-cyan-200" to="/case-studies">
                   Case Studies
                 </Link>
               </li>

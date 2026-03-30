@@ -59,7 +59,49 @@ export const testimonials = [
   },
 ]
 
-export const industries = ['Startups', 'E-commerce', 'Healthcare', 'FinTech', 'Education']
+export const industries = ['Startups', 'E-commerce', 'Healthcare', 'FinTech', 'Education'] as const
+
+export type IndustryName = (typeof industries)[number]
+
+export const industryPageContent: Record<
+  IndustryName,
+  { headline: string; summary: string; focus: string[] }
+> = {
+  Startups: {
+    headline: 'Ship fast without cutting corners',
+    summary:
+      'From early MVP to growth-stage product: we pair rapid delivery with architecture you will not regret when load and features multiply.',
+    focus: [
+      'Investor- and user-ready UX with performance budgets',
+      'Auth, billing-ready foundations, and clean TypeScript',
+      'AI only where it removes real work—not novelty layers',
+    ],
+  },
+  'E-commerce': {
+    headline: 'Conversion, catalog, and operations in one layer',
+    summary:
+      'Storefronts, admin tools, and automation across inventory, support, and fulfillment—with observability when campaigns spike traffic.',
+    focus: ['Checkout and payments reliability', 'Ops dashboards and integrations', 'Personalization and support deflection'],
+  },
+  Healthcare: {
+    headline: 'Compliant workflows teams actually use',
+    summary:
+      'Patient and provider experiences with audit-friendly patterns, role-based access, and automation for documents and scheduling.',
+    focus: ['Privacy-minded design and access control', 'Structured data and integrations', 'Human-in-the-loop AI where required'],
+  },
+  FinTech: {
+    headline: 'Trust, precision, and defensible systems',
+    summary:
+      'Internal tools and customer-facing flows where accuracy, traceability, and integration quality matter more than flashy UI alone.',
+    focus: ['Secure APIs and event-driven patterns', 'Reconciliation and reporting surfaces', 'Guardrails around AI and automation'],
+  },
+  Education: {
+    headline: 'Learning products that scale with enrollment',
+    summary:
+      'Portals, content delivery, and admin backends for institutions and edtech teams—built for accessibility and operational clarity.',
+    focus: ['Multi-role experiences and permissions', 'Content and assessment workflows', 'Analytics that guide curriculum and ops'],
+  },
+}
 
 export const faqs = [
   {
@@ -147,9 +189,9 @@ export const blueprintGoals = [
 ] as const
 
 export const mainNavLinks = [
-  { label: 'Solutions', to: '/#solutions' },
-  { label: 'Industries', to: '/#industries' },
-  { label: 'Case Studies', to: '/#case-studies' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Industries', to: '/industries' },
+  { label: 'Case Studies', to: '/case-studies' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ] as const
