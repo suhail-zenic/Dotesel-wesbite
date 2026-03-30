@@ -27,7 +27,7 @@ export function SiteHeader({ variant = 'minimal' }: SiteHeaderProps) {
           <img
             src="/Dotsel.png"
             alt="Dotsel Automation"
-            className="h-20 w-auto object-contain sm:h-24"
+            className="h-32 w-auto object-contain sm:h-36"
             loading="eager"
             decoding="async"
           />
