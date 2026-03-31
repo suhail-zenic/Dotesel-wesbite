@@ -21,7 +21,7 @@ export function SiteHeader({ variant = 'minimal' }: SiteHeaderProps) {
   return (
     <>
       <header
-        className={`relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-4 pb-2 transition-all duration-300 lg:px-10 ${
+        className={`relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-3 pb-1 transition-all duration-300 sm:pt-4 sm:pb-2 lg:px-10 ${
           elevated ? 'rounded-b-2xl bg-slate-950/75 shadow-lg shadow-slate-950/40 backdrop-blur-md' : ''
         }`}
       >
@@ -29,7 +29,7 @@ export function SiteHeader({ variant = 'minimal' }: SiteHeaderProps) {
           <img
             src="/Dotsel.png"
             alt="Dotsel Automation"
-            className="h-24 w-auto object-contain sm:h-28 md:h-32 lg:h-36"
+            className="h-20 w-auto object-contain sm:h-28 md:h-32 lg:h-36"
             loading="eager"
             decoding="async"
           />
